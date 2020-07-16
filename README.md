@@ -1,7 +1,7 @@
 # astro_sun_position
 Simplified routines for quickly calculating approximate positions of the Sun
 
-These routines were written as excersises for different platforms code for calculating approximate positions of the Sun given a latitude and a day of year. Their main purpose is my own learning and experimentation. The routines are crude and innacurate for most purposes. Their use in production systems is therefore discouraged.
+These routines were written as excersises for different platforms and in different languages for calculating approximate positions of the Sun at a given latitude and a day of year. Their main purpose is my own learning and experimentation. The routines are crude and innacurate for most purposes. Their use in production systems is therefore discouraged.
 
 
 # astro_sun_ephemeris.15c
@@ -30,7 +30,7 @@ The program retrieves:
 - maximum altitude at midday (RCL 6)
 
 CAVEATS:
-The program is barebones and assumes a circular orbit without precession. It does not take into account the equation of time, the refraction of the Sun on Earth's atmosphere, or the minor differences in rising or setting times due to movements of the Earth around its orbit.
+The program is barebones and assumes a circular orbit without precession. It does not take into account the equation of time, the refraction of the Sun on Earth's atmosphere, or the minor differences in rising or setting times due to movements of the Earth around its orbit. I estimate it should be accurate to within 15 minutes.
 
 NOTES:
 
