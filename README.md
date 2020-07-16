@@ -11,18 +11,30 @@ This is a program designed for the SwissMicros DM15L programmable calculator, a 
 USAGE:
 
 store decimal latitude in register 1 (positive for northern hemisphere, positive for southern hemisphere):
+```
 XX.YYYYY g STO 1
+```
+
 store date in register 2 using format DD.MM:
+```
 DD.MM STO 2
+```
+
 store value of altitude below the horizon for which you want to know the hour angle (this number must be positive, it is the amount to be added to a zenith angle of 90°):
+```
 D.DDDDD STO 3
+```
+
 store initial date:
+```
 20.06 STO 0
+```
 - NOTE: this is here taken as the (northern) summer solstice. To give the date of the equinox as a reference instead (21/3), change also line 24 of the program to the sine (key 23), since it is now a cosine (key 24).
 
 run the program:
+```
 f E
-
+```
 The program retrieves:
 - the minimum altitude of the Sun for the day. This value flashes briefly and is then stored in register 5 (RCL 5)
 - the hour angle of the Sun for the desired altitude. This value is shown at the end and stored in register 7 (RCL 7). This value can be converted to approximate setting time by substracting it from 24, or rising by adding it to 0.
@@ -35,3 +47,36 @@ The program is barebones and assumes a circular orbit without precession. It doe
 NOTES:
 
 The main program runs betewwn lines 001 and 054. Lines 085 - 133 are a subroutine to calculate the number of days between the two given dates. This subroutine is an implementation of the recipe given in page 5 of the book "Practical Astronomy with your calculator" by Peter Duffett-Smith.
+
+
+# astro_sun_ephemeris_simple.pl
+
+This is a Perl 5 program that calculates maximum and minim elevations of the Sun, and times for the Sun crossing different altitudes below the horizon that are important for astronomical observations. As above, these results are coarse and approximate. Times are given as if midnight time is 24:00 or 00:00, this means bno consideration is given to summer time.
+
+The program needs the modules Math::Trig and Date::Simple.
+
+USAGE:
+
+The program needs a latitude and optionally a date. If no latitude is given it just assumes that of Rome, Italy. Latitudes are positive in the northern hemisphere and negative in the southern hemisphere. Dates are ginve as ISO-8601 strings.
+
+For example, for running the prgram for latitude -35 (35S) for 2020-07-16:
+
+```
+astro_sun_ephemeris simple.pl -35 2020-07-16
+```
+
+gives:
+
+```
+Approximate Sun positions for latitude 35.00000 	 Date: 2020-07-16 (+25 days)
+Max elev: +33.69° 
+Min elev: -76.31° 
+Time - 0°: 16.94 h -  7.06 h
+Time - 6°: 17.48 h -  6.52 h
+Time - 9°: 17.74 h -  6.26 h
+Time -12°: 18.00 h -  6.00 h
+Time -15°: 18.25 h -  5.75 h
+Time -18°: 18.51 h -  5.49 h
+```
+
+NOTE: for simplicity, negative latitudes are converted to positive in the program. The results are in any case correct for the given southern latitude.
