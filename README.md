@@ -51,7 +51,7 @@ The main program runs between lines 001 and 054. Lines 085 - 133 are a subroutin
 
 # astro_sun_ephemeris_simple.pl
 
-This is a Perl 5 program that calculates maximum and minim elevations of the Sun, and times for the Sun crossing different altitudes below the horizon that are important for astronomical observations. As above, these results are coarse and approximate. Times are given as if midnight time is 24:00 or 00:00, this means bno consideration is given to summer time.
+This is a Perl 5 program that calculates maximum and minimum elevations of the Sun, and times for the Sun crossing different altitudes below the horizon that are important for astronomical observations. As above, these results are coarse and approximate. Times are given as if midnight time is 24:00 or 00:00, this means no consideration is given to summer time.
 
 The program needs the modules Math::Trig and Date::Simple.
 
