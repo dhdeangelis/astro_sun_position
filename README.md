@@ -46,7 +46,7 @@ The program is barebones and assumes a circular orbit without precession. It doe
 
 NOTES:
 
-The main program runs betewwn lines 001 and 054. Lines 085 - 133 are a subroutine to calculate the number of days between the two given dates. This subroutine is an implementation of the recipe given in page 5 of the book "Practical Astronomy with your calculator" by Peter Duffett-Smith.
+The main program runs between lines 001 and 054. Lines 085 - 133 are a subroutine to calculate the number of days between the two given dates. This subroutine is an implementation of the recipe given in page 5 of the book "Practical Astronomy with your calculator" by Peter Duffett-Smith.
 
 
 # astro_sun_ephemeris_simple.pl
