@@ -30,3 +30,7 @@ The program retrieves:
 
 CAVEATS:
 The program is barebones and assumes a circular orbit without precession. It does not take into account the equation of time, the refraction of the Sun on Earth's atmosphere, or the minor differences in rising or setting times due to movements of the Earth around its orbit.
+
+NOTES:
+
+The main program runs betewwn lines 001 and 054. Lines 085 - 133 are a subroutine to calculate the number of days between the two given dates. This subroutine is an application of the recipe ginven in page 5 of the book "Practical Astronomy with your calculator" by Peter Duffett-Smith.
