@@ -10,14 +10,15 @@ This is a program designed for the SwissMicros DM15L programmable calculator, a 
 
 USAGE:
 
-store decimal latitude in register 1:
+store decimal latitude in register 1 (positive for northern hemisphere, positive for southern hemisphere):
 XX.YYYYY g STO 1
 store date in register 2 using format DD.MM:
 DD.MM STO 2
-store value of altitude below the horizon for which you want to know the hour angle:
+store value of altitude below the horizon for which you want to know the hour angle (this number must be positive, it is the amount to be added to a zenith angle of 90°):
 D.DDDDD STO 3
-store initial date, here taken as the (northern) summer solstice:
+store initial date:
 20.06 STO 0
+- NOTE: this is here taken as the (northern) summer solstice. To give the date of the equinox as a reference instead (21/3), change also line 24 of the program to the sine (key 23), since it is now a cosine (key 24).
 
 run the program:
 f E
