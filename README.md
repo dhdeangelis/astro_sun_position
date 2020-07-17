@@ -10,7 +10,7 @@ This is a program designed for the SwissMicros DM15L programmable calculator, a 
 
 USAGE:
 
-store decimal latitude in register 1 (positive for northern hemisphere, positive for southern hemisphere):
+store decimal latitude in register 1 (positive for northern hemisphere, negative for southern hemisphere):
 ```
 XX.YYYYY g STO 1
 ```
