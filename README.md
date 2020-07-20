@@ -1,7 +1,7 @@
 # astro_sun_position
 Simplified routines for quickly calculating approximate positions of the Sun
 
-These routines were written as excersises for different platforms and in different languages for calculating approximate positions of the Sun at a given latitude and a day of year. Their main purpose is my own learning and experimentation. The routines are crude and innacurate for most purposes. Their use in production systems is therefore discouraged.
+These routines were written as exercises for different platforms and in different languages for calculating approximate positions of the Sun at a given latitude and a day of year. Their main purpose is my own learning and experimentation. The routines are crude and innacurate for most purposes. Their use in production systems is therefore discouraged.
 
 
 # astro_sun_ephemeris.15c
@@ -37,16 +37,16 @@ f E
 ```
 The program retrieves:
 - the minimum altitude of the Sun for the day. This value flashes briefly and is then stored in register 5 (RCL 5)
-- the hour angle of the Sun for the desired altitude. This value is shown at the end and stored in register 7 (RCL 7). This value can be converted to approximate setting time by substracting it from 24, or rising by adding it to 0.
+- the hour angle of the Sun for the desired altitude. This value is shown at the end and stored in register 7 (RCL 7). This value can be converted to approximate setting time by subtracting it from 24, or rising by adding it to 0.
 - Sun declination for date (RCL 4)
 - maximum altitude at midday (RCL 6)
 
 CAVEATS:
-The program is barebones and assumes a circular orbit without precession. It does not take into account the equation of time, the refraction of the Sun on Earth's atmosphere, or the minor differences in rising or setting times due to movements of the Earth around its orbit. I estimate it should be accurate to within 15 minutes.
+The program is bare-bones and assumes a circular orbit without precession. It does not take into account the equation of time, the refraction of the Sun on Earth's atmosphere, or the minor differences in rising or setting times due to movements of the Earth around its orbit. I estimate it should be accurate to within 15 minutes.
 
 NOTES:
 
-The main program runs between lines 001 and 054. Lines 085 - 133 are a subroutine to calculate the number of days between the two given dates. This subroutine is an implementation of the recipe given in page 5 of the book "Practical Astronomy with your calculator" by Peter Duffett-Smith.
+The main program runs between lines 001 and 084. Lines 085 - 133 are a subroutine to calculate the number of days between the two given dates. This subroutine is an implementation of the recipe given in page 5 of the book "Practical Astronomy with your calculator" by Peter Duffett-Smith.
 
 
 # astro_sun_ephemeris_simple.pl
@@ -57,9 +57,9 @@ The program needs the modules Math::Trig and Date::Simple.
 
 USAGE:
 
-The program needs a latitude and optionally a date. If no latitude is given it just assumes that of Rome, Italy. Latitudes are positive in the northern hemisphere and negative in the southern hemisphere. Dates are ginve as ISO-8601 strings.
+The program needs a latitude and optionally a date. If no latitude is given it just assumes that of Rome, Italy. Latitudes are positive in the northern hemisphere and negative in the southern hemisphere. Dates are given as ISO-8601 strings.
 
-For example, for running the prgram for latitude -35 (35S) for 2020-07-16:
+For example, for running the program for latitude -35 (35S) for 2020-07-16:
 
 ```
 astro_sun_ephemeris simple.pl -35 2020-07-16
