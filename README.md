@@ -1,7 +1,7 @@
 # astro_sun_position
 Simplified routines for quickly calculating approximate positions of the Sun
 
-These routines were written as exercises for different platforms and in different languages for calculating approximate positions of the Sun at a given latitude and a day of year. Their main purpose is my own learning and experimentation. The routines are crude and innacurate for most purposes. Their use in production systems is therefore discouraged.
+These routines were written as exercises for different platforms and in different languages for calculating approximate positions of the Sun at a given latitude and day of year. Their main purpose is my own learning and experimentation. The routines are crude and innacurate for most purposes. Their use in production systems is therefore discouraged.
 
 
 # astro_sun_ephemeris.15c
