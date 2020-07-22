@@ -20,9 +20,9 @@ store date in register 2 using format DD.MM:
 DD.MM STO 2
 ```
 
-store value of altitude below the horizon for which you want to know the hour angle (this number must be positive, it is the amount to be added to a zenith angle of 90°):
+store value of altitude below the horizon for which you want to know the hour angle (for example: -18 för 18° below the horizon):
 ```
-D.DDDDD STO 3
+-DD.DDDDD STO 3
 ```
 
 store initial date:
@@ -46,7 +46,7 @@ The program is bare-bones and assumes a circular orbit without precession. It do
 
 NOTES:
 
-The main program runs between lines 001 and 084. Lines 085 - 133 are a subroutine to calculate the number of days between the two given dates. This subroutine is an implementation of the recipe given in page 5 of the book "Practical Astronomy with your calculator" by Peter Duffett-Smith.
+The main program runs between lines 001 and 081. Lines 082 - 130 are a subroutine to calculate the number of days between the two given dates. This subroutine is an implementation of the recipe given in page 5 of the book "Practical Astronomy with your calculator" by Peter Duffett-Smith.
 
 
 # astro_sun_ephemeris_simple.pl
