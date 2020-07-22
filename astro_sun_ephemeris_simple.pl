@@ -45,15 +45,10 @@ my $sol_elev_min = $siteLat + $sun_decl - 90;
 printf qq(Min elev: %+5.2f° \n), $sol_elev_min;
 
 # hour angles
-my @zangles = qw(90 96 99 102 105 108);
+my @zangles = qw(0 -6 -9 -12 -15 -18);
 foreach my $zangle (@zangles) {
-	my $h = acos((cos($zangle*pi/180)-(sin($siteLat*pi/180)*sin($sun_decl*pi/180)))/(cos($siteLat*pi/180)*cos($sun_decl*pi/180)))*180/pi;
-	printf qq(Time -%2d°: %5.2f h - %5.2f h\n), $zangle - 90,  24 - (180-$h)/15, (180-$h)/15;
+	my $h = acos((sin($zangle*pi/180)-(sin($siteLat*pi/180)*sin($sun_decl*pi/180)))/(cos($siteLat*pi/180)*cos($sun_decl*pi/180)))*180/pi;
+	printf qq(Time %2d°: %5.2f h - %5.2f h\n), $zangle,  24 - (180-$h)/15, (180-$h)/15;
 	}
 
 print qq(\n);
-
-
-
-
-
