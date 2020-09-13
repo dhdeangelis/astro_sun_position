@@ -6,7 +6,7 @@ These routines were written as exercises for different platforms and in differen
 
 # astro_sun_ephemeris.15c
 
-This is a program designed for the SwissMicros DM15L programmable calculator, a clone of the HP-15C calculator that was popular in the 1980's. It also works on Torsten Manz's HP-15C simulator (http://hp-15c.homepage.t-online.de).
+This is a program designed for the SwissMicros DM15L programmable calculator, a clone of the HP-15C calculator that was popular in the 1980's. It also works on [Torsten Manz's HP-15C simulator](http://hp-15c.homepage.t-online.de).
 
 USAGE:
 
@@ -53,7 +53,7 @@ The main program runs between lines 001 and 081. Lines 082 - 130 are a subroutin
 
 This is a Perl 5 program that calculates maximum and minimum elevations of the Sun, and times for the Sun crossing different altitudes below the horizon that are important for astronomical observations. As above, these results are coarse and approximate. Times are given as if midnight time is 24:00 or 00:00, this means no consideration is given to summer time.
 
-The program needs the modules Math::Trig and Date::Simple.
+The program uses the modules [Math::Trig](https://metacpan.org/pod/Math::Trig) and [Date::Simple](https://metacpan.org/pod/Date::Simple).
 
 USAGE:
 
