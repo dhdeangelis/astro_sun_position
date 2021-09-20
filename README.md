@@ -81,5 +81,5 @@ NOTE: for simplicity, negative latitudes are converted to positive in the progra
 
 
 CAVEATS:
-The routine is bare-bones. It assumes a that the Earth's orbit around the Sun is circular and without precession. It also does not take into account the equation of time, the refraction of the Sun on Earth's atmosphere, or the minor differences in rising or setting times due to other movements of the Earth around its orbit. I estimate it should be accurate to within 15 minutes. Additional time discrepancies can occur depending on the difference between a location's actual longitude and the longitude for which its time zone is defined. This discrepancy can amount to up to 30 minutes.
+The routine is bare-bones. It assumes that the Earth's orbit around the Sun is circular and without precession. It also does not take into account the equation of time, the refraction of the Sun on Earth's atmosphere, or the minor differences in rising or setting times due to other movements of the Earth around its orbit. I estimate it should normally be accurate to within 15 minutes. Additional time discrepancies can occur depending on the difference between a location's actual longitude and the longitude for which its time zone is defined. This discrepancy can amount to up to 30 minutes.
 
