@@ -41,12 +41,10 @@ The program retrieves:
 - Sun declination for date (RCL 4)
 - maximum altitude at midday (RCL 6)
 
-CAVEATS:
-The program is bare-bones and assumes a circular orbit without precession. It does not take into account the equation of time, the refraction of the Sun on Earth's atmosphere, or the minor differences in rising or setting times due to movements of the Earth around its orbit. I estimate it should be accurate to within 15 minutes.
 
 NOTES:
 
-The main program runs between lines 001 and 081. Lines 082 - 130 are a subroutine to calculate the number of days between the two given dates. This subroutine is an implementation of the recipe given in page 5 of the book "Practical Astronomy with your calculator" by Peter Duffett-Smith.
+The main program runs between lines 001 and 081. Lines 082 - 130 are a subroutine to calculate the number of days between the two given dates. This last subroutine is an implementation of the recipe given in page 5 of the book "Practical Astronomy with your calculator" by Peter Duffett-Smith.
 
 
 # astro_sun_ephemeris_simple.pl
@@ -80,3 +78,8 @@ Time -18°: 18.51 h -  5.49 h
 ```
 
 NOTE: for simplicity, negative latitudes are converted to positive in the program. The results are in any case correct for the given southern latitude.
+
+
+CAVEATS:
+The routine is bare-bones. It assumes a that the Earth's orbit around the Sun is circular and without precession. It also does not take into account the equation of time, the refraction of the Sun on Earth's atmosphere, or the minor differences in rising or setting times due to other movements of the Earth around its orbit. I estimate it should be accurate to within 15 minutes. Additional time discrepancies can occur depending on the difference between a location's actual longitude and the longitude for which its time zone is defined. This discrepancy can amount to up to 30 minutes.
+
