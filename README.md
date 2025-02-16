@@ -36,10 +36,10 @@ run the program:
 f E
 ```
 The program retrieves:
-- the minimum altitude of the Sun for the day. This value flashes briefly and is then stored in register 5 (RCL 5)
-- the hour angle of the Sun for the desired altitude. This value is shown at the end and stored in register 7 (RCL 7). This value can be converted to approximate setting time by subtracting it from 24, or rising by adding it to 0.
 - Sun declination for date (RCL 4)
+- the minimum altitude of the Sun for the day. This value flashes briefly and is then stored in register 5 (RCL 5)
 - maximum altitude at midday (RCL 6)
+- the hour angle of the Sun for the desired altitude. This value is shown at the end and stored in register 7 (RCL 7). This value can be converted to approximate setting time by subtracting it from 24, or rising by adding it to 0.
 
 
 NOTES:
